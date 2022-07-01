@@ -6,7 +6,6 @@
 
 .cabecalhoPrincipal-nav {
     display: flex; /* faz com que os elementos <a> da nav fiquem lado a lado */
-    margin-left: 5px;
 }
 
 .conteudoPrincipal-cursos {
@@ -53,4 +52,48 @@
 
 .rodapePrincipal-contatoForm-fieldset {
     display: flex;
+}
+
+/* parte mobile */
+@media(max-width: 768px) { 
+    .cabecalhoPrincipal-nav {
+        display: flex; /* faz com que os elementos <a> da nav fiquem lado a lado */
+        flex-direction: column;
+    }
+
+    .cabecalhoPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+
+    .conteudoPrincipal-cursos {
+        flex-wrap: column wrap;
+    }
+
+    .conteudoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1;
+    }
 }
